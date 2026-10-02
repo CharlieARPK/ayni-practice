@@ -1,0 +1,12 @@
+node_modules/
+.DS_Store
+test-results/
+dist/
+ayni-public.zip
+.ayni-public-*.zip
+.aws/
+.codex/
+.agents/
+.openai/
+.env
+.env.*

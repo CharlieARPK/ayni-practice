@@ -1,0 +1,556 @@
+{
+  "formatVersion": "1.0",
+  "title": "山のこだま",
+  "bpm": 80,
+  "part": {
+    "id": "malta",
+    "name": "Malta",
+    "instrument": "Malta"
+  },
+  "key": "G major",
+  "defaultTimeSignature": {
+    "numerator": 4,
+    "denominator": 4
+  },
+  "markers": [],
+  "navigation": [],
+  "measures": [
+    {
+      "number": 55,
+      "timeSignature": null,
+      "section": "55〜60小節 · 4/4",
+      "events": [
+        {
+          "type": "note",
+          "pitch": "G4",
+          "duration": 1.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "A4",
+          "duration": 0.5,
+          "role": "back",
+          "needsReview": false
+        },
+        {
+          "type": "rest",
+          "duration": 0.5,
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "B4",
+          "duration": 0.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "D5",
+          "duration": 1,
+          "role": "back",
+          "needsReview": false
+        }
+      ],
+      "needsReview": false
+    },
+    {
+      "number": 56,
+      "timeSignature": null,
+      "section": null,
+      "events": [
+        {
+          "type": "note",
+          "pitch": "G4",
+          "duration": 1.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "A4",
+          "duration": 0.5,
+          "role": "back",
+          "needsReview": false
+        },
+        {
+          "type": "rest",
+          "duration": 0.5,
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "B4",
+          "duration": 0.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "D5",
+          "duration": 1,
+          "role": "back",
+          "needsReview": false
+        }
+      ],
+      "needsReview": false
+    },
+    {
+      "number": 57,
+      "timeSignature": null,
+      "section": null,
+      "events": [
+        {
+          "type": "note",
+          "pitch": "G4",
+          "duration": 1.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "A4",
+          "duration": 0.5,
+          "role": "back",
+          "needsReview": false
+        },
+        {
+          "type": "rest",
+          "duration": 0.5,
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "B4",
+          "duration": 0.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "D5",
+          "duration": 1,
+          "role": "back",
+          "needsReview": false
+        }
+      ],
+      "needsReview": false
+    },
+    {
+      "number": 58,
+      "timeSignature": null,
+      "section": null,
+      "events": [
+        {
+          "type": "note",
+          "pitch": "G4",
+          "duration": 1.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "A4",
+          "duration": 0.5,
+          "role": "back",
+          "needsReview": false
+        },
+        {
+          "type": "rest",
+          "duration": 0.5,
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "B4",
+          "duration": 0.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "D5",
+          "duration": 1,
+          "role": "back",
+          "needsReview": false
+        }
+      ],
+      "needsReview": false
+    },
+    {
+      "number": 59,
+      "timeSignature": null,
+      "section": null,
+      "events": [
+        {
+          "type": "note",
+          "pitch": "G4",
+          "duration": 1.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "A4",
+          "duration": 0.5,
+          "role": "back",
+          "needsReview": false
+        },
+        {
+          "type": "rest",
+          "duration": 0.5,
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "B4",
+          "duration": 0.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "D5",
+          "duration": 1,
+          "role": "back",
+          "needsReview": false
+        }
+      ],
+      "needsReview": false
+    },
+    {
+      "number": 60,
+      "timeSignature": null,
+      "section": null,
+      "events": [
+        {
+          "type": "note",
+          "pitch": "G4",
+          "duration": 1.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "A4",
+          "duration": 0.5,
+          "role": "back",
+          "needsReview": false
+        },
+        {
+          "type": "rest",
+          "duration": 0.5,
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "B4",
+          "duration": 0.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "D5",
+          "duration": 1,
+          "role": "back",
+          "needsReview": false
+        }
+      ],
+      "needsReview": false
+    },
+    {
+      "number": 61,
+      "timeSignature": {
+        "numerator": 6,
+        "denominator": 8
+      },
+      "section": "61〜68小節 · 6/8",
+      "events": [
+        {
+          "type": "note",
+          "pitch": "B4",
+          "duration": 0.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "A4",
+          "duration": 0.5,
+          "role": "back",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "G4",
+          "duration": 0.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "D5",
+          "duration": 1.5,
+          "role": "back",
+          "needsReview": false
+        }
+      ],
+      "needsReview": false
+    },
+    {
+      "number": 62,
+      "timeSignature": null,
+      "section": null,
+      "events": [
+        {
+          "type": "note",
+          "pitch": "B4",
+          "duration": 0.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "A4",
+          "duration": 0.5,
+          "role": "back",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "G4",
+          "duration": 0.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "D5",
+          "duration": 1.5,
+          "role": "back",
+          "needsReview": false
+        }
+      ],
+      "needsReview": false
+    },
+    {
+      "number": 63,
+      "timeSignature": null,
+      "section": null,
+      "events": [
+        {
+          "type": "note",
+          "pitch": "B4",
+          "duration": 0.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "A4",
+          "duration": 0.5,
+          "role": "back",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "G4",
+          "duration": 0.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "D5",
+          "duration": 1.5,
+          "role": "back",
+          "needsReview": false
+        }
+      ],
+      "needsReview": false
+    },
+    {
+      "number": 64,
+      "timeSignature": null,
+      "section": null,
+      "events": [
+        {
+          "type": "note",
+          "pitch": "B4",
+          "duration": 0.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "A4",
+          "duration": 0.5,
+          "role": "back",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "G4",
+          "duration": 0.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "D5",
+          "duration": 1.5,
+          "role": "back",
+          "needsReview": false
+        }
+      ],
+      "needsReview": false
+    },
+    {
+      "number": 65,
+      "timeSignature": null,
+      "section": null,
+      "events": [
+        {
+          "type": "note",
+          "pitch": "B4",
+          "duration": 0.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "A4",
+          "duration": 0.5,
+          "role": "back",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "G4",
+          "duration": 0.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "D5",
+          "duration": 1.5,
+          "role": "back",
+          "needsReview": false
+        }
+      ],
+      "needsReview": false
+    },
+    {
+      "number": 66,
+      "timeSignature": null,
+      "section": null,
+      "events": [
+        {
+          "type": "note",
+          "pitch": "B4",
+          "duration": 0.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "A4",
+          "duration": 0.5,
+          "role": "back",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "G4",
+          "duration": 0.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "D5",
+          "duration": 1.5,
+          "role": "back",
+          "needsReview": false
+        }
+      ],
+      "needsReview": false
+    },
+    {
+      "number": 67,
+      "timeSignature": null,
+      "section": null,
+      "events": [
+        {
+          "type": "note",
+          "pitch": "B4",
+          "duration": 0.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "A4",
+          "duration": 0.5,
+          "role": "back",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "G4",
+          "duration": 0.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "D5",
+          "duration": 1.5,
+          "role": "back",
+          "needsReview": false
+        }
+      ],
+      "needsReview": false
+    },
+    {
+      "number": 68,
+      "timeSignature": null,
+      "section": null,
+      "events": [
+        {
+          "type": "note",
+          "pitch": "B4",
+          "duration": 0.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "A4",
+          "duration": 0.5,
+          "role": "back",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "G4",
+          "duration": 0.5,
+          "role": "front",
+          "needsReview": false
+        },
+        {
+          "type": "note",
+          "pitch": "D5",
+          "duration": 1.5,
+          "role": "both",
+          "needsReview": false
+        }
+      ],
+      "needsReview": false
+    }
+  ]
+}

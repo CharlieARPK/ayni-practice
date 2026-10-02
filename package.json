@@ -1,0 +1,8 @@
+{
+  "name": "ayni-practice",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "node scripts/serve.mjs", "start": "node scripts/serve.mjs", "test": "node --test tests/*.test.mjs", "schema": "node scripts/generate-schema.mjs", "package": "node scripts/package.mjs" },
+  "engines": { "node": ">=20.11" }
+}

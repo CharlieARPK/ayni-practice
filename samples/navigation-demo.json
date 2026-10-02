@@ -1,0 +1,212 @@
+{
+  "formatVersion": "1.0",
+  "title": "楽譜進行の練習",
+  "bpm": 100,
+  "part": {
+    "id": "demo",
+    "name": "任意のパート名",
+    "instrument": "任意"
+  },
+  "key": "G major",
+  "defaultTimeSignature": {
+    "numerator": 4,
+    "denominator": 4
+  },
+  "markers": [],
+  "navigation": [
+    {
+      "type": "repeat",
+      "startMeasure": 1,
+      "endMeasure": 3,
+      "times": 2
+    },
+    {
+      "type": "ending",
+      "number": 1,
+      "startMeasure": 3,
+      "endMeasure": 3
+    },
+    {
+      "type": "ending",
+      "number": 2,
+      "startMeasure": 4,
+      "endMeasure": 4
+    },
+    {
+      "type": "segno",
+      "measure": 5,
+      "id": "default"
+    },
+    {
+      "type": "toCoda",
+      "measure": 6,
+      "target": "default"
+    },
+    {
+      "type": "dalSegno",
+      "measure": 7,
+      "target": "default",
+      "mode": "alCoda"
+    },
+    {
+      "type": "coda",
+      "measure": 9,
+      "id": "default"
+    }
+  ],
+  "measures": [
+    {
+      "number": 1,
+      "timeSignature": null,
+      "section": "反復と括弧",
+      "events": [
+        {
+          "type": "note",
+          "pitch": "G4",
+          "duration": 4,
+          "role": "front",
+          "needsReview": false
+        }
+      ],
+      "needsReview": false
+    },
+    {
+      "number": 2,
+      "timeSignature": null,
+      "section": null,
+      "events": [
+        {
+          "type": "note",
+          "pitch": "A4",
+          "duration": 4,
+          "role": "back",
+          "needsReview": false
+        }
+      ],
+      "needsReview": false
+    },
+    {
+      "number": 3,
+      "timeSignature": null,
+      "section": null,
+      "events": [
+        {
+          "type": "note",
+          "pitch": "B4",
+          "duration": 4,
+          "role": "front",
+          "needsReview": false
+        }
+      ],
+      "needsReview": false
+    },
+    {
+      "number": 4,
+      "timeSignature": null,
+      "section": null,
+      "events": [
+        {
+          "type": "note",
+          "pitch": "C5",
+          "duration": 4,
+          "role": "back",
+          "needsReview": false
+        }
+      ],
+      "needsReview": false
+    },
+    {
+      "number": 5,
+      "timeSignature": null,
+      "section": "Segno",
+      "events": [
+        {
+          "type": "note",
+          "pitch": "D5",
+          "duration": 4,
+          "role": "front",
+          "needsReview": false
+        }
+      ],
+      "needsReview": false
+    },
+    {
+      "number": 6,
+      "timeSignature": null,
+      "section": null,
+      "events": [
+        {
+          "type": "note",
+          "pitch": "G4",
+          "duration": 4,
+          "role": "back",
+          "needsReview": false
+        }
+      ],
+      "needsReview": false
+    },
+    {
+      "number": 7,
+      "timeSignature": null,
+      "section": null,
+      "events": [
+        {
+          "type": "note",
+          "pitch": "A4",
+          "duration": 4,
+          "role": "front",
+          "needsReview": false
+        }
+      ],
+      "needsReview": false
+    },
+    {
+      "number": 8,
+      "timeSignature": null,
+      "section": null,
+      "events": [
+        {
+          "type": "note",
+          "pitch": "B4",
+          "duration": 4,
+          "role": "back",
+          "needsReview": false
+        }
+      ],
+      "needsReview": false
+    },
+    {
+      "number": 9,
+      "timeSignature": {
+        "numerator": 3,
+        "denominator": 4
+      },
+      "section": "Coda · 3/4",
+      "events": [
+        {
+          "type": "note",
+          "pitch": "C5",
+          "duration": 3,
+          "role": "front",
+          "needsReview": false
+        }
+      ],
+      "needsReview": false
+    },
+    {
+      "number": 10,
+      "timeSignature": null,
+      "section": null,
+      "events": [
+        {
+          "type": "note",
+          "pitch": "D5",
+          "duration": 3,
+          "role": "back",
+          "needsReview": false
+        }
+      ],
+      "needsReview": false
+    }
+  ]
+}

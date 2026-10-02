@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f4ef">
+  <meta name="description" content="前と後、ひとりで掛け合う。サンポーニャなどの合奏を練習するオフライン対応アプリ。">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Ayni — ひとりで、掛け合う。</title>
+</head>
+<body>
+  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7Z"/></symbol>
+    <symbol id="i-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/></symbol>
+    <symbol id="i-retry" viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1 8M4 4v6h6"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M6 5v14m12-14-9 7 9 7Z"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V3m-5 5 5-5 5 5M4 15v5h16v-5"/></symbol>
+    <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 17V5l11-2v12M9 8l11-2"/><ellipse cx="6" cy="18" rx="3" ry="2"/><ellipse cx="17" cy="16" rx="3" ry="2"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="i-loop" viewBox="0 0 24 24"><path d="M4 10V6h15l-4-4M20 14v4H5l4 4"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 6h16M9 6V3h6v3M6 6l1 15h10l1-15M10 10v7m4-7v7"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></symbol>
+  </defs></svg>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="./" aria-label="Ayni ホーム"><span class="brand-mark"><i></i><i></i><i></i><i></i><i></i></span><span>ayni<span class="brand-dot">.</span></span></a>
+      <p class="brand-caption">ひとりで、掛け合う。</p>
+      <div class="library-heading"><span class="eyebrow">MY LIBRARY</span><span id="song-count" class="count-badge">0</span></div>
+      <div id="song-list" class="song-list" aria-label="保存した曲"></div>
+      <button id="import-button" class="import-button"><svg><use href="#i-plus"/></svg>曲を追加<span>JSON</span></button>
+      <input id="file-input" type="file" accept=".json,application/json" hidden multiple>
+      <div class="sidebar-bottom">
+        <div class="local-note"><span class="status-dot"></span><span>あなたの端末に保存</span></div>
+        <p>音楽も、練習も、あなたのペースで。</p>
+        <button class="text-button" id="help-button"><svg><use href="#i-info"/></svg>使い方・JSONについて</button>
+        <button id="install-button" class="text-button" hidden>ホーム画面に追加</button>
+      </div>
+    </aside>
+    <main>
+      <header class="topbar"><span>YOUR PRACTICE SPACE</span><span class="offline-status" id="offline-status"><span class="status-dot"></span>準備しています</span></header>
+      <div class="workspace">
+        <section class="song-heading">
+          <div><div class="eyebrow accent">LET’S PLAY TOGETHER</div><h1 id="song-title">読み込み中…</h1><div class="song-meta"><label class="part-select-wrap"><svg><use href="#i-music"/></svg><select id="part-select" aria-label="パート"></select></label><span class="meta-divider"></span><span id="song-key"></span><span class="meta-divider"></span><span id="song-time"></span></div></div>
+          <button id="delete-song" class="icon-button delete-song" aria-label="この曲を削除" title="この曲を削除"><svg><use href="#i-trash"/></svg></button>
+        </section>
+        <div class="app-mode-switch" role="group" aria-label="画面切り替え"><button id="practice-tab" class="active" aria-pressed="true">練習</button><button id="editor-tab" aria-pressed="false">データ編集 <span id="review-count"></span></button></div>
+        <div id="data-warning" class="data-warning" hidden></div>
+        <div id="practice-view">
+        <div class="demo-banner"><div><strong>楽譜がなくても、ここから。</strong><span>サンプル曲で掛け合いや反復を試せます。</span></div><button id="demo-button" class="demo-button">デモを選ぶ <span aria-hidden="true">↗</span></button></div>
+        <div id="demo-guide" class="demo-guide" hidden><span id="demo-guide-text"></span><button id="close-demo-guide" aria-label="デモの説明を閉じる">×</button></div>
+        <div class="practice-grid">
+          <section class="player-panel" aria-label="再生操作">
+            <div class="current-measure"><div class="current-top"><span class="eyebrow">NOW PLAYING</span><span id="play-state" class="state-pill">スタンバイ</span></div><div class="measure-number"><span id="current-measure">01</span><span class="measure-unit">小節<span id="total-measures">/ 16</span></span></div><div class="measure-bottom"><span id="current-section">イントロ</span><div id="beat-dots" class="beat-dots" aria-label="拍"></div></div><div class="progress-track"><div id="measure-progress"></div></div><div class="mountain-art" aria-hidden="true"><svg viewBox="0 0 360 140"><path d="m0 135 80-91 43 42 63-75 63 91 32-39 79 72"/><path d="m29 135 57-66 46 51 58-83 42 78 45-28 40 48"/><path d="m73 53 10 26 12-9m81-46 13 31 10-25"/></svg></div></div>
+            <div class="role-section"><div class="control-heading"><label>自分が吹く</label><span id="partner-hint">アプリは「後」を演奏</span></div><div class="segmented role-toggle" id="role-toggle"><button type="button" data-role="front" class="active" aria-pressed="true"><span class="role-dot front-dot"></span>前<span class="role-en">FRONT</span></button><button type="button" data-role="back" aria-pressed="false"><span class="role-dot back-dot"></span>後<span class="role-en">BACK</span></button><button type="button" data-role="listen" aria-pressed="false">両方聴く</button></div></div>
+            <div class="tempo-section"><div class="control-heading"><label for="bpm">テンポ</label><button id="reset-bpm" class="subtle-button">標準 <span id="default-bpm">80</span> に戻す</button></div><div class="tempo-controls"><button id="bpm-down" class="tempo-button" aria-label="BPMを1下げる">−</button><div class="bpm-value"><input id="bpm" type="number" min="30" max="240" value="80" inputmode="numeric" aria-label="BPM"><span>BPM</span></div><button id="bpm-up" class="tempo-button" aria-label="BPMを1上げる">＋</button></div><input id="bpm-slider" class="range-slider" type="range" min="30" max="240" value="80" aria-label="テンポ"><div class="slider-labels"><span>30</span><span>240</span></div></div>
+            <div class="range-section"><div class="range-field"><label for="start-measure">開始小節</label><input id="start-measure" type="number" min="1" value="1" inputmode="numeric"></div><span class="range-arrow">→</span><div class="range-field"><label for="end-measure">終了小節</label><input id="end-measure" type="number" min="1" value="16" inputmode="numeric"></div></div>
+            <div class="transport-primary"><button id="play-button" class="play-button"><svg><use href="#i-play"/></svg><span>再生する</span></button><button id="stop-button" class="stop-button"><svg><use href="#i-stop"/></svg>停止</button></div>
+            <div class="transport-secondary"><button id="again-button"><svg><use href="#i-retry"/></svg>もう一度</button><button id="previous-button"><svg><use href="#i-back"/></svg>1小節戻る</button></div>
+            <div class="restart-setting"><label for="restart-from">やり直す位置</label><select id="restart-from"><option value="current">現在の小節</option><option value="start">開始小節</option></select></div>
+          </section>
+          <div class="details-column">
+            <section class="settings-panel"><div class="panel-heading"><h2>練習の設定</h2><span class="eyebrow">MAKE IT YOURS</span></div><div class="setting-row"><div><label for="loop-toggle">区間をループ</label><p id="loop-description">1〜16小節を繰り返す</p></div><label class="switch"><input id="loop-toggle" type="checkbox"><span></span></label></div><div class="setting-row"><label for="count-in">カウントイン</label><select id="count-in"><option value="0">なし</option><option value="1" selected>1小節</option><option value="2">2小節</option></select></div><div class="setting-row"><label for="metronome-toggle">メトロノーム</label><label class="switch"><input id="metronome-toggle" type="checkbox"><span></span></label></div><div class="mode-setting"><label>再生モード</label><div class="segmented mode-toggle"><button id="mode-section" class="active" aria-pressed="true">区間練習</button><button id="mode-score" aria-pressed="false">楽譜どおり</button></div><p id="mode-description">反復やジャンプを使わず、指定した区間を練習します。</p></div></section>
+            <section class="measures-panel"><div class="panel-heading"><h2>小節を選ぶ</h2><button id="select-all" class="subtle-button">全小節</button></div><p class="panel-description">タップして、練習の開始位置を選択</p><div id="measure-list" class="measure-list"></div><div class="measure-legend"><span><i class="legend-active"></i>現在の小節</span><span><i class="legend-range"></i>練習区間</span></div></section>
+            <div class="practice-tip"><svg><use href="#i-info"/></svg><p>相手の音を聴きながら、自分の音を重ねてみましょう。ゆっくりからで大丈夫。</p></div>
+          </div>
+        </div>
+        <section class="score-panel"><div class="panel-heading"><div class="score-heading"><h2>フレーズの見取り図</h2><span id="preview-range"></span></div><div class="note-legend"><span><i class="front-dot"></i>前</span><span><i class="back-dot"></i>後</span><span><i class="both-dot"></i>両方</span><span><i class="unknown-dot"></i>不明</span></div></div><div id="note-preview" class="note-preview"></div><p class="score-caption">音の長さと掛け合いの目安です。不明な担当の音は再生しません。</p></section>
+        <section class="score-panel route-panel"><div class="panel-heading"><h2>演奏の道順</h2><span id="route-summary"></span></div><p id="route-help" class="panel-description">数字は実際に演奏する小節の順序です。</p><div id="route-list" class="route-list" aria-label="演奏順"></div></section>
+        <section class="score-panel"><div class="panel-heading"><div><h2>音名で読む簡易楽譜</h2><p class="panel-description">左から順に演奏。1拍は四分音符の長さです。</p></div><div class="score-pager"><button id="score-prev" aria-label="前の4小節の楽譜">‹</button><span id="score-page"></span><button id="score-next" aria-label="次の4小節の楽譜">›</button></div></div><div id="practice-score" class="practice-score"></div><p class="score-caption">五線譜ではなく、JSONの音高・音価・担当をそのまま確認する練習用の表示です。再生中は現在小節に追従します。</p></section>
+        </div>
+        <section id="editor-view" class="editor-view" hidden></section>
+        <footer><span>ひとつの旋律を、ふたりの呼吸で。</span><span>AYNI · PRACTICE COMPANION</span></footer>
+      </div>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="help-dialog"><div class="dialog-heading"><h2>Ayniの使い方</h2><button id="close-help" class="icon-button" aria-label="閉じる">×</button></div><p>自分が吹く側を選ぶと、アプリがもう片方を演奏します。「両方聴く」で旋律全体を確認できます。</p><ol><li>曲のJSONを追加し、パートを選びます。</li><li>小節をタップ、または開始・終了小節を入力します。</li><li>テンポを決め、再生。区間ループで繰り返し練習できます。</li></ol><p>「両方」担当の音はどのモードでも再生します。「不明」は無音です。音高は調から補正せず、JSONの指定どおりに再生します。</p><p>「楽譜どおり」では反復・D.C.・D.S.・括弧を解釈します。記号による移動は指定区間の外にも進みます。ループは区間練習専用です。</p><p>曲はこのブラウザーに保存されます。ブラウザーのデータ削除で消えるため、元のJSONは手元に残してください。</p><p>AndroidのChromeではHTTPSで開き、メニューの「ホーム画面に追加」からインストールできます。画面上部が「オフライン対応」になれば、次回からネット接続なしで使えます。</p><div class="help-links"><a href="./samples/andean-dialogue.json" download>サンプルJSONを保存 ↗</a><a href="./JSON_FORMAT.md" target="_blank" rel="noopener">JSON仕様を開く ↗</a></div></dialog>
+  <dialog id="demo-dialog"><div class="dialog-heading"><h2>楽譜なしで試してみる</h2><button id="close-demo" class="icon-button" aria-label="デモを閉じる">×</button></div><p>選ぶと曲と練習設定を準備します。音は「再生する」を押してから鳴ります。</p><div class="demo-cards"><button data-demo="dialogue"><small>01 · 掛け合い</small><strong>前と後を聴き分ける</strong><span>「風のたより」の1〜4小節。まず両方を聴き、その後「自分が吹く」を切り替えます。</span></button><button data-demo="navigation"><small>02 · 楽譜の進行</small><strong>反復からCodaへ</strong><span>1番・2番括弧とD.S. al Codaを確認。「演奏の道順」でジャンプ先が分かります。</span></button><button data-demo="range"><small>03 · 区間練習</small><strong>55〜60小節をループ</strong><span>55小節から始まる練習曲。付点音符、休符、途中の拍子変更も試せます。</span></button></div><p>サンプルは端末に保存されます。同じデモを選び直しても曲は重複しません。</p></dialog>
+  <noscript>このアプリはJavaScriptを有効にしてご利用ください。</noscript>
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>
